@@ -27,7 +27,7 @@
         <li class="menu__item border">
           <div class="submenu__itemName">example</div>
         </li>
-        <li class="menu__item ">
+        <li class="menu__item border">
           <div class="submenu__itemName">example</div>
         </li>
         <li class="menu__item border">
@@ -79,6 +79,8 @@
     width: 170px;
     transform: scale(0);
     border: 1px solid transparent;
+    position: relative;
+    z-index: 1;
   }
 
   .menu__items {
@@ -115,7 +117,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 5;
   }
 
   .speechPart:after {

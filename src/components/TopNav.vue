@@ -2,8 +2,8 @@
   <div class="top__nav">
     <top-lang/>
     <top-view/>
-    <div class="actions__print">
-      <span>Print</span>
+    <div class="top__print print">
+      <div class="print__nameItem">Print</div>
     </div>
   </div>
 </template>
@@ -22,10 +22,8 @@
 <style scoped>
   .top__nav {
     width: 20%;
-    padding-top: 14px;
 
     display: flex;
-    align-items: center;
     justify-content: space-around;
   }
 
@@ -34,23 +32,23 @@
     cursor: pointer;
   }
 
-  .actions__print {
+  .top__print {
+    width: 70px;
     height: 50px;
-
   }
 
-  .actions__print > span {
-    display: block;
+  .print__nameItem {
+    height: 36px;
+    cursor: pointer;
     border: 1px solid transparent;
-    width: 100%;
-    height: 35px;
+    margin: 7px 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .actions__print > span:hover {
+  .print__nameItem:hover {
     border: 1px solid #d4a373;
   }
 </style>

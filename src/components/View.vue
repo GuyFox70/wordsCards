@@ -1,14 +1,16 @@
 <template>
   <div class="top__view view">
     <span class="view__nameItem">View</span>
-    <div class="view__options">
-      <div class="view__optionsItem">
-        <input type="radio" name="view" id="card" checked/>
-        <label for="card">Card</label>
-      </div>
-      <div class="view__optionsItem">
-        <input type="radio" name="view" id="table"/>
-        <label for="table">Table</label>
+    <div class="view__wrap-options">
+      <div class="view__options">
+        <div class="view__optionsItem">
+          <input type="radio" name="view" id="card" checked/>
+          <label for="card">Card</label>
+        </div>
+        <div class="view__optionsItem">
+          <input type="radio" name="view" id="table"/>
+          <label for="table">Table</label>
+        </div>
       </div>
     </div>
   </div>
@@ -28,13 +30,15 @@
 </script>
 <style scoped>
   .view {
+    width: 70px;
     height: 50px;
   }
 
   .view__nameItem {
-    width: 100%;
-    height: 35px;
+    height: 36px;
+    cursor: pointer;
     border: 1px solid transparent;
+    margin: 7px 0;
 
     display: flex;
     align-items: center;
@@ -45,19 +49,24 @@
     border: 1px solid #d4a373;
   }
 
-  .view__options {
-    display: none;
+  .view__wrap-options {
     width: 120px;
+    transform: scale(0);
+    border: 1px solid transparent;
+    position: relative;
+    z-index: 1;
+  }
 
-    margin: 10px 0 0 0;
-    padding: 7px 10px;
+  .view__options {
+    margin: 2px 0 0 0;
     border: 1px solid #e9edc9;
     border-radius: 5px;
     box-shadow: 0px 1px 7px #e9edc9;
+    padding: 8px;
   }
 
-  .view:hover .view__options {
-    display: block;
+  .view:hover .view__wrap-options {
+    transform: scale(1);
   }
 
   .view__optionsItem {

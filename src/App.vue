@@ -32,5 +32,8 @@
     width: 100vw;
     height: 100vh;
     backround: #fefae0;
+
+    display: flex;
+    flex-direction: column;
   }
 </style>

@@ -1,14 +1,16 @@
 <template>
   <div class="top__switchLang switchLang">
-    <span class="switchLang__nameItem">Lang</span>
-    <div class="switchLang__options">
-      <div class="switchLang__optionsItem">
-        <input type="radio" name="lang" id="eng" checked/>
-        <label for="eng">English</label>
-      </div>
-      <div class="switchLang__optionsItem">
-        <input type="radio" name="lang" id="ru"/>
-        <label for="ru">Russian</label>
+    <div class="switchLang__nameItem">Lang</div>
+    <div class="switchLang__wrap-options">
+      <div class="switchLang__options">
+        <div class="switchLang__optionsItem">
+          <input type="radio" name="lang" id="eng" checked/>
+          <label for="eng">English</label>
+        </div>
+        <div class="switchLang__optionsItem">
+          <input type="radio" name="lang" id="ru"/>
+          <label for="ru">Russian</label>
+        </div>
       </div>
     </div>
   </div>
@@ -28,36 +30,43 @@
 </script>
 <style scoped>
   .switchLang {
+    width: 70px;
     height: 50px;
   }
 
   .switchLang__nameItem {
-    width: 100%;
-    height: 35px;
+    height: 36px;
+    cursor: pointer;
     border: 1px solid transparent;
+    margin: 7px 0;
 
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;  
   }
 
   .top__switchLang:hover .switchLang__nameItem {
     border: 1px solid #d4a373;
   }
 
-  .switchLang__options {
-    display: none;
+  .switchLang__wrap-options {
     width: 120px;
+    transform: scale(0);
+    border: 1px solid transparent;
+    position: relative;
+    z-index: 1;
+  }
 
-    margin: 10px 0 0 0;
-    padding: 7px 10px;
+  .switchLang__options {
+    margin: 2px 0 0 0;
     border: 1px solid #e9edc9;
     border-radius: 5px;
     box-shadow: 0px 1px 7px #e9edc9;
+    padding: 8px;
   }
 
-  .switchLang:hover .switchLang__options {
-    display: block;
+  .switchLang:hover .switchLang__wrap-options {
+    transform: scale(1);
   }
 
   .switchLang__optionsItem {
