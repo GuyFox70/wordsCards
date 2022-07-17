@@ -6,7 +6,7 @@
       <ul class="menu__items">
 
         <li class="menu__item border showSubItems">
-          <div class="submenu__itemName speechPart">speech part</div>
+          <div class="submenu__itemName speechPart">speech parts</div>
   
           <ul class="submenu__items">
             <li class="submenu__item">nouns</li>
@@ -15,24 +15,24 @@
           </ul>
         </li>
 
-        <li class="menu__item border">
+        <!-- <li class="menu__item border">
           <div class="submenu__itemName">example</div>
-        </li>
-        <li class="menu__item border">
+        </li> -->
+        <!-- <li class="menu__item border">
           <div class="submenu__itemName">example</div>
-        </li>
-        <li class="menu__item border">
+        </li> -->
+        <!-- <li class="menu__item border">
           <div class="submenu__itemName">example</div>
-        </li>
-        <li class="menu__item border">
+        </li> -->
+        <!-- <li class="menu__item border">
           <div class="submenu__itemName">example</div>
-        </li>
-        <li class="menu__item border">
+        </li> -->
+        <!-- <li class="menu__item border">
           <div class="submenu__itemName">example</div>
-        </li>
-        <li class="menu__item border">
+        </li> -->
+        <!-- <li class="menu__item border">
           <div class="submenu__itemName">example</div>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div> 
@@ -42,7 +42,12 @@
     name: 'top-btn-menu',
     data() {
       return {
-        
+        css: {
+          menuWrapItems: '190px',
+          menuItem: '335px',
+          submenuItemName: '170px',
+          submenuItems: '150px',
+        },
       }
     },
     methods: {
@@ -76,7 +81,7 @@
   }
 
   .menu__wrap-items {
-    width: 170px;
+    width: v-bind(css.menuWrapItems);
     transform: scale(0);
     border: 1px solid transparent;
     position: relative;
@@ -101,7 +106,7 @@
   }
 
   .menu__item:hover {
-    width: 315px;
+    width: v-bind(css.menuItem);
   }
 
   .menu__item:not(:last-child) {
@@ -109,7 +114,7 @@
   }
 
   .submenu__itemName {
-    width: 150px;
+    width: v-bind(css.submenuItemName);
     height: 100%;
     line-height: 25px;
     padding: 0 5px;
@@ -121,7 +126,7 @@
 
   .speechPart:after {
     content: '\27A4';
-    margin: 3px 0 0 40px;
+    margin: 3px 0 0 50px;
     z-index: 1;
   }
 
@@ -134,7 +139,7 @@
   }
 
   .submenu__items {
-    width: 150px;
+    width: v-bind(css.submenuItems);
     border: 1px solid #e9edc9;
     border-radius: 5px;
     box-shadow: 0px 1px 7px #e9edc9;
