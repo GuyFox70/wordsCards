@@ -1,5 +1,5 @@
 <template lang="html">
-  <section class="flip-card" id="flipCard">
+  <section class="flip-card" id="flipCard" @click="turnOverCard">
     <div class="flip-card__inner" id="flipCardInner">
       <div class="flip-card__front">
         <div class="card__exclamation-point" id="mistakeReport"></div>
@@ -19,11 +19,23 @@
     name: 'eng-card',
     data() {
       return {
-        
+        flipCardInner: null,
+        i: 0,
       }
     },
     methods: {
-      
+      turnOverCard(e) {
+        if (!this.i) {
+          this.flipCardInner.classList.add('flip-card__inner-back');
+          this.i++;
+        } else {
+          this.flipCardInner.classList.remove('flip-card__inner-back');
+          this.i--;
+        }
+      },
+    },
+    mounted() {
+      this.flipCardInner = document.querySelector('#flipCardInner');
     },
   }
 </script>
