@@ -27,6 +27,7 @@
     border: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #d4a373;
   }
   .wrapper {
     width: 100vw;
