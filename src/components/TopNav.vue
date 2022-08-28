@@ -49,6 +49,6 @@
   }
 
   .print__nameItem:hover {
-    border: 1px solid #d4a373;
+    border: 1px solid var(--white);
   }
 </style>

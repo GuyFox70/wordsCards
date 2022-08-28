@@ -46,7 +46,7 @@
   }
 
   .top__switchLang:hover .switchLang__nameItem {
-    border: 1px solid #d4a373;
+    border: 1px solid var(--white);
   }
 
   .switchLang__wrap-options {
@@ -59,9 +59,9 @@
 
   .switchLang__options {
     margin: 2px 0 0 0;
-    border: 1px solid #e9edc9;
+    border: 1px solid var(--bg-color);
     border-radius: 5px;
-    box-shadow: 0px 1px 7px #e9edc9;
+    box-shadow: 0px 1px 7px var(--shadow-dark);
     padding: 8px;
   }
 
@@ -78,7 +78,7 @@
   }
 
   .switchLang__optionsItem:hover {
-    box-shadow: 0px 1px 7px #e9edc9;
+    box-shadow: 0px 1px 7px rgba(0,0,0,.3);
     transition: box-shadow .1s linear;
   }
 

@@ -4,7 +4,7 @@ import fastifyMongodb from "@fastify/mongodb";
 async function dbConnector(fastify, options) {
   fastify.register(fastifyMongodb, {
     forceClose: true,
-    url: 'mongodb://localhost:27017/test',
+    url: 'mongodb://card:card123@localhost:27017/words',
   });
 }
 

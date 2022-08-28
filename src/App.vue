@@ -27,12 +27,19 @@
     border: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #d4a373;
+    color: #fff;
+    list-style-type: none;
+  }
+  :root {
+    --bg-color: #85CDCA;
+    --bg-color-sub-list: #40B3A2;
+    --white: #fff;
+    --shadow-dark: rgba(0,0,0,.3);
   }
   .wrapper {
     width: 100vw;
     height: 100vh;
-    backround: #fefae0;
+    background: var(--bg-color);
 
     display: flex;
     flex-direction: column;

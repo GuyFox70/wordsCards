@@ -26,6 +26,8 @@
 
     padding: 0 25px;
     height: 50px;
-    box-shadow: 0px 1px 7px #e9edc9;
+    box-shadow: 0px 1px 7px rgba(0,0,0,.3);
+
+    font-size: 18px;
   }
 </style>

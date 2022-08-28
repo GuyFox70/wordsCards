@@ -26,7 +26,7 @@
   .top__currentPage {
     width: 50px;
     padding: 0 5px;
-    border: 1px solid #ccd5ae;
+    border: 1px solid var(--white);
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
