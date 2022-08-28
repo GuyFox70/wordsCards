@@ -28,5 +28,5 @@
   }
 </script>
 <style scoped>
-  @import url('../assets/css/btnLang.css');
+  @import url('../assets/css/lang.css');
 </style>

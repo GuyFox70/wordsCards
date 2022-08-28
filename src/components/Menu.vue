@@ -47,5 +47,5 @@
   }
 </script>
 <style scoped>
-  @import url('../assets/css/btnMenu.css');
+  @import url('../assets/css/menu.css');
 </style>

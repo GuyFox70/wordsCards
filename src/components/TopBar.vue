@@ -2,17 +2,16 @@
   <div class="top__nav">
     <lang-btn/>
     <view-btn/>
-    <div class="top__print print">
-      <div class="print__nameItem">Print</div>
-    </div>
+    <print-btn/>
   </div>
 </template>
 <script>
   import LangBtn from '@/components/Lang.vue';
   import ViewBtn from '@/components/View.vue';
+  import PrintBtn from '@/components/Print.vue'
 
   export default {
-    components: { LangBtn, ViewBtn },
+    components: { LangBtn, ViewBtn, PrintBtn },
     name: 'top-bar',
     data() {
       return {}
@@ -35,20 +34,5 @@
   .top__print {
     width: 70px;
     height: 50px;
-  }
-
-  .print__nameItem {
-    height: 36px;
-    cursor: pointer;
-    border: 1px solid transparent;
-    margin: 7px 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .print__nameItem:hover {
-    border: 1px solid var(--white);
   }
 </style>
