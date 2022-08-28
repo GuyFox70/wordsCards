@@ -1,0 +1,70 @@
+.view {
+  width: 70px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  position: relative;
+}
+.view__btn {
+  width: 100%;
+  height: 30px;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.view:hover .view__btn {
+  border: 1px solid var(--white);
+}
+.view__list {
+  display: none;
+  min-width: 120px;
+  position: absolute;
+  padding: 10px 0 0 0;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+}
+.top__view:hover .view__list {
+  display: block;
+}
+.view__item {
+  height: 35px;
+  background: var(--bg-color-sub-list);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+.view__item input {
+  display: none;
+  cursor: pointer;
+}
+.view__item label {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.view__item > label:before {
+  display: block;
+  content: "";
+  width: 17px;
+  height: 17px;
+  background: url("../img/radio.svg");
+  margin: 0 10px;
+}
+.view__item > input:checked + label:before {
+  background: url("../img/radioChecked.svg");
+}
+.view__item:hover > input:checked + label:before {
+  background: url("../img/radioCheckedFocus.svg");
+}
+.view__item:hover > label:before {
+  background: url("../img/radioFocus.svg");
+}

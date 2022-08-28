@@ -37,7 +37,7 @@
 </template>
 <script>
   export default {
-    name: 'top-btn-menu',
+    name: 'menu-btn',
     data() {
       return {}
     },

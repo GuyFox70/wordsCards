@@ -1,19 +1,19 @@
 <template>
   <div class="top__nav">
-    <top-lang/>
-    <top-view/>
+    <lang-btn/>
+    <view-btn/>
     <div class="top__print print">
       <div class="print__nameItem">Print</div>
     </div>
   </div>
 </template>
 <script>
-  import TopLang from '@/components/Lang.vue';
-  import TopView from '@/components/View.vue';
+  import LangBtn from '@/components/Lang.vue';
+  import ViewBtn from '@/components/View.vue';
 
   export default {
-    components: { TopLang, TopView },
-    name: 'top-nav',
+    components: { LangBtn, ViewBtn },
+    name: 'top-bar',
     data() {
       return {}
     }

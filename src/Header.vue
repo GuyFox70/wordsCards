@@ -1,17 +1,17 @@
 <template>
   <header class="top">
-    <top-btn-menu/>
-    <top-pages/>
-    <top-nav/>
+    <menu-btn/>
+    <switch-pages/>
+    <top-bar/>
 </header>
 </template>
 <script>
-  import TopBtnMenu from '@/components/BtnMenu.vue';
-  import TopPages from '@/components/TopPages.vue';
-  import TopNav from '@/components/TopNav.vue';
+  import MenuBtn from '@/components/Menu.vue';
+  import SwitchPages from '@/components/SwitchPages.vue';
+  import TopBar from '@/components/TopBar.vue';
 
   export default {
-    components: { TopBtnMenu, TopPages, TopNav },
+    components: { MenuBtn, SwitchPages, TopBar },
     name: 'page-header',
     data() {
       return {}

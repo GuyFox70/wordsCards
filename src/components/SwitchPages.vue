@@ -8,7 +8,7 @@
 </template>
 <script>
   export default {
-    name: 'top-pages',
+    name: 'switch-pages',
     data() {
       return {}
     }

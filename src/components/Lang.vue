@@ -16,7 +16,7 @@
 </template>
 <script>
   export default {
-    name: 'top-lang',
+    name: 'lang-btn',
     data() {
       return {
         
