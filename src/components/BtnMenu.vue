@@ -4,34 +4,34 @@
 
     <ul class="sub-menu__list">
 
-      <li class="sub-menu__item speechPart">
+      <li class="sub-menu__item showSubMenu">
         <span class="hasSubMenu">speech parts</span>
 
-        <!-- <ul class="submenu__items">
-          <li class="submenu__item">nouns</li>
-          <li class="submenu__item">adjectives</li>
-          <li class="submenu__item">verbs</li> 
-        </ul> -->
+        <ul class="sub-sub-menu__list">
+          <li class="sub-sub-menu__item"><span>nouns</span></li>
+          <li class="sub-sub-menu__item"><span>adjectives</span></li>
+          <li class="sub-sub-menu__item"><span>verbs</span></li> 
+        </ul>
       </li>
 
       <li class="sub-menu__item">
-        <span>example</span>
+        <span>example 2</span>
       </li>
       <li class="sub-menu__item">
-        <span>example</span>
+        <span>example 3</span>
       </li>
-      <!-- <li class="menu__item border">
-        <div class="submenu__itemName">example</div>
-      </li> -->
-      <!-- <li class="menu__item border">
-        <div class="submenu__itemName">example</div>
-      </li> -->
-      <!-- <li class="menu__item border">
-        <div class="submenu__itemName">example</div>
-      </li> -->
-      <!-- <li class="menu__item border">
-        <div class="submenu__itemName">example</div>
-      </li> -->
+      <li class="sub-menu__item">
+        <span>example 4</span>
+      </li>
+      <li class="sub-menu__item">
+        <span>example 5</span>
+      </li>
+      <li class="sub-menu__item">
+        <span>example 6</span>
+      </li>
+      <li class="sub-menu__item">
+        <span>example 7</span>
+      </li>
     </ul>
   </nav> 
 </template>
@@ -73,6 +73,7 @@
   }
   .sub-menu__list {
     display: none;
+    min-width: 200px;
     padding: 10px 0 0 0;
     position: absolute;
     top: 40px;
@@ -80,11 +81,13 @@
     z-index: 1;
   }
   .sub-menu__list>li {
-    width: 200px;
+    width: 100%;
     background: var(--bg-color-sub-list);
-    box-shadow: 1px 1px 2px var(--shadow-dark);
     cursor: pointer;
     padding: 3px;
+  }
+  .sub-menu__item {
+    position: relative;
   }
   .sub-menu__item>span {
     display: block;
@@ -104,6 +107,37 @@
     right: 0;
   }
   .sub-menu__item:hover>span {
+    border: 1px solid var(--white);
+  }
+  .sub-sub-menu__list {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+
+    min-width: 150px;
+    padding: 0 0 0 1px;
+  }
+  .sub-sub-menu__list>li {
+    width: 100%;
+    background: var(--bg-color-sub-list);
+    cursor: pointer;
+    padding: 3px;
+  }
+  .sub-sub-menu__item>span {
+    display: block;
+    width: 90%;
+    height: 30px;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    padding: 0 0 0 3px;
+
+    position: relative;
+  }
+  .showSubMenu:hover .sub-sub-menu__list {
+    display: block;
+  }
+  .sub-sub-menu__item:hover>span {
     border: 1px solid var(--white);
   }
 </style>
