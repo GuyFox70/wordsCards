@@ -2,7 +2,7 @@
   <section class="flip-card" id="flipCard" @click="turnOverCard">
     <div class="flip-card__inner" id="flipCardInner">
       <div class="flip-card__front">
-        <div class="card__exclamation-point" id="mistakeIcon"></div>
+        <div class="card__exclamation-point" id="mistakeIcon" @click.stop="openReport"></div>
         <div class="flib-card__word-field" id="wordField">Example</div>
         <div class="flib-card__word-prev" id="prevWord">prev</div>
         <div class="flib-card__word-studied" id="studied">know</div>
@@ -35,6 +35,9 @@
           this.mistakeIcon.removeAttribute('style');
           this.i--;
         }
+      },
+      openReport() {
+        alert('open');
       },
     },
     mounted() {
