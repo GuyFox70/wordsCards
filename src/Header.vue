@@ -2,7 +2,7 @@
   <header class="top">
     <menu-btn/>
     <switch-pages/>
-    <top-bar/>
+    <top-bar @view="view"/>
 </header>
 </template>
 <script>
@@ -15,6 +15,11 @@
     name: 'page-header',
     data() {
       return {}
+    },
+    methods: {
+      view(data) {
+        this.$emit('view', data);
+      }
     },
   }
 </script>

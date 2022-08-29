@@ -1,6 +1,7 @@
 <template>
   <main class="content">
-    <eng-card/>
+    <eng-card v-if="!isTable"/>
+    <h1 v-else>Test</h1>
   </main>
 </template>
 <script>
@@ -9,6 +10,13 @@
   export default {
     components: { EngCard },
     name: 'page-content',
+    props: {
+      isTable: {
+        type: Number,
+        required: true,
+        default: 0
+      }
+    }
   }
 </script>
 <style scoped>

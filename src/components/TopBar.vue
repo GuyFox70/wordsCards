@@ -1,7 +1,7 @@
 <template>
   <div class="top__nav">
     <lang-btn/>
-    <view-btn/>
+    <view-btn @view="view"/>
     <print-btn/>
   </div>
 </template>
@@ -15,7 +15,12 @@
     name: 'top-bar',
     data() {
       return {}
-    }
+    },
+    methods: {
+      view(data) {
+        this.$emit('view', data);
+      } 
+    },
   }
 </script>
 <style scoped>

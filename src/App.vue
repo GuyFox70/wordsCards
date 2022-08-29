@@ -1,7 +1,7 @@
 <template>
   <section class="wrapper">
-    <page-header/>
-    <page-content/>
+    <page-header @view="view"/>
+    <page-content :isTable="isTable"/>
   </section>  
 </template>
 
@@ -12,9 +12,15 @@
   export default {
     components: { PageHeader, PageContent },
     data() {
-      return {}
+      return {
+        isTable: 0,
+      }
     },
-    methods: {},
+    methods: {
+      view(data) {
+        this.isTable = data
+      }
+    },
     mounted() {},
   }
 </script>

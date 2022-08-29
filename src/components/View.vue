@@ -23,10 +23,10 @@
     },
     methods: {
       showCard() {
-        console.log('Card');
+        this.$emit('view', 0);
       },
       showTable() {
-        console.log('Table');
+        this.$emit('view', 1);
       },
     },
     mounted() {
