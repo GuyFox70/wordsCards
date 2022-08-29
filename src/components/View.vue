@@ -3,11 +3,11 @@
     <span class="view__btn">View</span>
     <div class="view__list">
       <div class="view__item">
-        <input type="radio" name="view" id="card" checked/>
+        <input type="radio" name="view" id="card" checked @change="showCard"/>
         <label for="card">Card</label>
       </div>
       <div class="view__item">
-        <input type="radio" name="view" id="table"/>
+        <input type="radio" name="view" id="table" @change="showTable"/>
         <label for="table">Table</label>
       </div>
     </div>
@@ -22,6 +22,14 @@
       }
     },
     methods: {
+      showCard() {
+        console.log('Card');
+      },
+      showTable() {
+        console.log('Table');
+      },
+    },
+    mounted() {
       
     },
   }
