@@ -1,10 +1,15 @@
 async function routers(fastify, options) {
-  const collection = fastify.mongo.db.collection('users');
+  const collection = fastify.mongo.db.collection('en_words_v5');
+  const mime = {
+    json: 'application/json; charset=utf-8',
+  }
 
-  fastify.get('/', async (req, reply) => {
-    const result = await collection.find().toArray()
-    
-    return result;
+  fastify.get('/sizeCollection', async (req, reply) => {
+    const result = await collection.count();
+    reply
+      .code(200)
+      .header('Content-Type', mime.json);
+    return { data: result };
   });
 }
 

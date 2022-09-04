@@ -1,3 +1,4 @@
+import fastifyCors from '@fastify/cors';
 import Fastify from 'fastify';
 import dbConnector from './db/connectMongo.mjs';
 import routers from './routers/index.mjs';
@@ -9,6 +10,9 @@ const fastify = Fastify({
 
 fastify.register(dbConnector);
 fastify.register(routers);
+fastify.register(fastifyCors, {
+  origin: true,
+});
 
 fastify.listen({ port: port }, (err, address) => {
   if (err) {

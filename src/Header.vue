@@ -1,7 +1,7 @@
 <template>
   <header class="top">
     <menu-btn/>
-    <switch-pages/>
+    <switch-pages :sizeCollection="sizeCollection"/>
     <top-bar @view="view"/>
 </header>
 </template>
@@ -13,6 +13,13 @@
   export default {
     components: { MenuBtn, SwitchPages, TopBar },
     name: 'page-header',
+    props: {
+      sizeCollection: {
+        type: Number,
+        required: true,
+        default: 0,
+      }
+    },
     data() {
       return {}
     },
