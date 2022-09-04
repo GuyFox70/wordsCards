@@ -18,7 +18,7 @@
     },
     methods: {
       view(data) {
-        this.isTable = data
+        this.isTable = data;
       }
     },
     mounted() {},

@@ -1,51 +1,55 @@
 <template>
-  <section class="flip-card" id="flipCard" @click="turnOverCard">
-    <div class="flip-card__inner" id="flipCardInner">
-      <div class="flip-card__front">
-        <div class="card__exclamation-point" id="mistakeIcon" @click.stop="openReport"></div>
-        <div class="flib-card__word-field" id="wordField">Example</div>
-        <div class="flib-card__word-prev" id="prevWord">prev</div>
-        <div class="flib-card__word-studied" id="studied">know</div>
-        <div class="flib-card__word-next" id="nextWord">next</div>
+  <section class="card" @click="turnOverCard">
+
+      <div class="card-front" id="front">
+        <!-- <div class="card-front__exclamation-point" id="mistakeIcon" @click.stop="openReport"></div> -->
+        <div class="card-front__word-field" id="wordField">Example</div>
+        <div class="card-front__word-prev" id="prevWord">prev</div>
+        <div class="card-front__word-studied" id="studied">know</div>
+        <div class="card-front__word-next" id="nextWord">next</div>
       </div>
-      <div class="flip-card__back">
-        <div class="flib-card__translate-field" id="translateField">Пример</div>
+
+      <div class="card-back" id="back">
+
+        <div class="card-back__content">
+          <div class="card-back__translate-field" id="translateField">Пример</div>
+        </div>
+
       </div>
-    </div>
+
   </section>
 </template>
+
 <script>
   export default {
     name: 'eng-card',
     data() {
       return {
-        flipCardInner: null,
-        mistakeIcon: null,
-        i: 0,
+        fornt: null,
+        back: null,
+        i: 0
       }
     },
     methods: {
-      turnOverCard(e) {
+      turnOverCard() {
         if (!this.i) {
-          this.flipCardInner.classList.add('flip-card__inner-back');
-          this.mistakeIcon.setAttribute('style', 'left: 13px');
           this.i++;
+          this.card.classList.add('card-front-turnOver');    
+          this.back.classList.add('card-back-turnOver');
         } else {
-          this.flipCardInner.classList.remove('flip-card__inner-back');
-          this.mistakeIcon.removeAttribute('style');
           this.i--;
+          this.card.classList.remove('card-front-turnOver');
+          this.back.classList.remove('card-back-turnOver');
         }
-      },
-      openReport() {
-        alert('open');
-      },
+      }
     },
     mounted() {
-      this.flipCardInner = document.querySelector('#flipCardInner');
-      this.mistakeIcon = document.querySelector('#mistakeIcon');
+      this.card = document.querySelector('#front');
+      this.back = document.querySelector('#back');
     },
   }
 </script>
-<style lang="less" scoped>
-  @import '../assets/less/card.less';
+
+<style scoped>
+  @import url('../assets/css/card.css');
 </style>

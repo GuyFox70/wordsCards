@@ -16,6 +16,11 @@
         required: true,
         default: 0
       }
+    },
+    computed: {
+      setClassName() {
+        return !this.isTable ? 'flip-card__inner-transform' :'';
+      }
     }
   }
 </script>
@@ -23,6 +28,7 @@
   .content {
     display: flex;
     justify-content: center;
+    align-items: center;
 
     flex-grow: 1;
     width: 100%;
