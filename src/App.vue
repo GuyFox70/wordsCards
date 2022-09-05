@@ -6,6 +6,7 @@
 </template>
 
 <script>
+  import helper from './utils/helper.mjs';
   import PageHeader from '@/Header.vue';
   import PageContent from '@/Content.vue';
 
@@ -14,7 +15,7 @@
     data() {
       return {
         isTable: 0,
-        sizeCollection: 0,
+        sizeCollection: {},
         arrPartsSpeech: [
           'n',
           'v',
@@ -23,6 +24,7 @@
           'adv'
         ],
         i: 0,
+        h: helper
       }
     },
     methods: {
@@ -31,23 +33,22 @@
       }
     },
     mounted() {
-      // getSizeCollection(this.arrPartsSpeech[this.i])
-      // .then(data => {
-        // this.sizeCollection = data;
-      // })
-      // .catch(console.error);
+      const lengthArrPartsSpeech = this.arrPartsSpeech.length;
 
-      async function getSizeCollection(str) {
-        const response = await fetch(`http://127.0.0.1:8000/sizeCollection/${ str }`);
-
-        if (response.ok) {
-          const { data } = await response.json();
-          return data;
-        } else {
-          throw new Error('Fetch is failed!');
+      
+      const getSizeCollections = async (path) => {
+        try {
+          for await (const elem of this.arrPartsSpeech) {
+            const data = await this.h.sendFetch(`${path}/${elem}`);
+            this.sizeCollection[elem] = data
+            console.log(this.sizeCollection);
+          }
+        } catch (error) {
+          console.log(error);
         }
-      },
-
+      };
+      
+      getSizeCollections('http://127.0.0.1:8000/sizeCollection');
     }
   }
 </script>

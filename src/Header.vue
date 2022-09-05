@@ -15,9 +15,9 @@
     name: 'page-header',
     props: {
       sizeCollection: {
-        type: Number,
+        type: Object,
         required: true,
-        default: 0,
+        default: {},
       }
     },
     data() {

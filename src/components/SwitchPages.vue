@@ -3,7 +3,7 @@
     <p>page</p>
     <span class="top__currentPage" contenteditable="true">1</span>
     <p>of</p>
-    <p class="top__totalPages">{{ sizeCollection }}</p>
+    <p class="top__totalPages">100</p>
   </div>
 </template>
 <script>
@@ -11,9 +11,9 @@
     name: 'switch-pages',
     props: {
       sizeCollection: {
-        type: Number,
+        type: Object,
         required: true,
-        default: 0,
+        default: {},
       }
     },
     data() {

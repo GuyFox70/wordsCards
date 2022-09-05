@@ -4,12 +4,14 @@ async function routers(fastify, options) {
     json: 'application/json; charset=utf-8',
   }
 
-  fastify.get('/sizeCollection', async (req, reply) => {
-    const result = await collection.count();
+  fastify.get('/sizeCollection/:partSpeech', async (req, reply) => {
+    // const result = await collection.count();
+    const { params } = req;
+    console.log('hsdgfjhdsfjjsd', params);
     reply
       .code(200)
       .header('Content-Type', mime.json);
-    return { data: result };
+    return { data: 0 };
   });
 }
 
