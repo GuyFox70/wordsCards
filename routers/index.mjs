@@ -5,9 +5,9 @@ async function routers(fastify, options) {
   }
 
   fastify.get('/sizeCollection/:partSpeech', async (req, reply) => {
-    // const result = await collection.count();
     const { params } = req;
-    console.log('hsdgfjhdsfjjsd', params);
+    // const result = await collection.count();
+
     reply
       .code(200)
       .header('Content-Type', mime.json);

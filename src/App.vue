@@ -41,7 +41,7 @@
           for await (const elem of this.arrPartsSpeech) {
             const data = await this.h.sendFetch(`${path}/${elem}`);
             this.sizeCollection[elem] = data
-            console.log(this.sizeCollection);
+            // console.log(this.sizeCollection);
           }
         } catch (error) {
           console.log(error);
