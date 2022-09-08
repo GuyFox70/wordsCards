@@ -1,15 +1,19 @@
 <template>
   <section class="quantity-words quantity">
     <div class="quantity__left-arrow">&lt;</div>
-    <!-- <div class="quantity__number">100</div> -->
-    <input type="text" class="quantity__number" maxlength="3" value="100"/>
+    <input type="text" class="quantity__number" maxlength="3" :value="amountWords"/>
     <div class="quantity__right-arrow">&gt;</div>
   </section>
 </template>
 
 <script>
   export default {
-    name: 'quantity-words'
+    name: 'quantity-words',
+    data() {
+      return {
+        amountWords: 100,
+      }
+    },
   }
 </script>
 
