@@ -1,9 +1,9 @@
 <template>
   <div class="top__pages">
-    <p>page</p>
-    <span class="top__currentPage" contenteditable="true">1</span>
-    <p>of</p>
-    <p class="top__totalPages">100</p>
+    <span>page</span>
+    <input class="top__currentPage" maxlength="3" value="1"/>
+    <span>of</span>
+    <span class="top__totalPages">100</span>
   </div>
 </template>
 <script>
@@ -35,8 +35,9 @@
     padding: 0 5px;
     border: 1px solid var(--white);
     border-radius: 5px;
-    cursor: pointer;
     text-align: center;
+    background: transparent;
+    font-size: 18px;
 
     display: flex;
     align-items: center;
