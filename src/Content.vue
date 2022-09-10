@@ -1,14 +1,15 @@
 <template>
   <main class="content">
-    <eng-card v-if="isCard"/>
-    <h1 v-else>Test</h1>
+    <word-card v-if="isCard"/>
+    <word-table v-else/>
   </main>
 </template>
 <script>
-  import EngCard from './components/Card.vue';
+  import WordCard from './components/Card.vue';
+  import WordTable from './components/Table.vue';
 
   export default {
-    components: { EngCard },
+    components: { WordCard, WordTable },
     name: 'page-content',
     props: {
       isCard: {

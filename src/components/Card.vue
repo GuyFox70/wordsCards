@@ -22,7 +22,7 @@
 
 <script>
   export default {
-    name: 'eng-card',
+    name: 'word-card',
     data() {
       return {
         fornt: null,
