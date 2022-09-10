@@ -16,6 +16,7 @@
   cursor: pointer;
   border: 1px solid transparent;
   user-select: none;
+  border-radius: 5px;
 
   display: flex;
   align-items: center;
