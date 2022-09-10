@@ -17,18 +17,24 @@
   export default {
     name: 'view-btn',
     data() {
-      return {}
+      return {
+        body: null,
+      }
     },
     methods: {
       showCard() {
+        this.body.classList.remove('view-table');
+        this.body.classList.add('view-card');
         this.$emit('view', 1);
       },
       showTable() {
+        this.body.classList.remove('view-card');
+        this.body.classList.add('view-table');
         this.$emit('view', 0);
       },
     },
     mounted() {
-      
+      this.body = document.body;
     },
   }
 </script>

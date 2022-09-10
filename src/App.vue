@@ -1,7 +1,7 @@
 <template>
   <section class="wrapper">
     <page-header @view="view" :sizeCollection="sizeCollection"/>
-    <page-content :isCard="isCard"/>
+    <page-content :isCard="isCard" :words="words"/>
   </section>  
 </template>
 
@@ -25,6 +25,7 @@
         i: 0,
         h: helper,
         isCard: 1,
+        words: [],
       }
     },
     methods: {

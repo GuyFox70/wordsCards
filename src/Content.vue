@@ -1,21 +1,24 @@
 <template>
   <main class="content">
-    <word-card v-if="isCard"/>
-    <word-table v-else/>
+    <words-card :words="words" v-if="isCard"/>
+    <words-table :words="words" v-else/>
   </main>
 </template>
 <script>
-  import WordCard from './components/Card.vue';
-  import WordTable from './components/Table.vue';
+  import WordsCard from '@/components/Card.vue';
+  import WordsTable from '@/components/Table.vue';
 
   export default {
-    components: { WordCard, WordTable },
+    components: { WordsCard, WordsTable },
     name: 'page-content',
     props: {
       isCard: {
         type: Number,
-        required: true,
         default: 0,
+      },
+      words: {
+        type: Array,
+        default: []
       }
     },
     data() {
@@ -28,7 +31,7 @@
       }
     },
     mounted() {
-      
+      document.body.classList.add('view-card');
     },
   }
 </script>
@@ -36,12 +39,19 @@
   .content {
     display: flex;
     justify-content: center;
-    align-items: center;
-
+    
     flex-grow: 1;
     width: 100%;
     height: auto;
     position: relative;
     overflow: hidden;
+  }
+  
+  .view-card .content {
+    align-items: center;
+  }
+
+  .view-table .content {
+    align-items: flex-start;
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <section class="card" @click="turnOverCard">
+  <section class="card" @click="turnOverCard" v-if="words.length !== 0">
 
       <div class="card-front" id="front">
         <!-- <div class="card-front__exclamation-point" id="mistakeIcon" @click.stop="openReport"></div> -->
@@ -16,13 +16,22 @@
         </div>
 
       </div>
-
   </section>
+  <words-empty v-else/>
 </template>
 
 <script>
+  import WordsEmpty from '@/components/Empty.vue';
+
   export default {
-    name: 'word-card',
+    components: { WordsEmpty },
+    name: 'words-card',
+    props: {
+      words: {
+        type: Array,
+        default: []
+      }
+    },
     data() {
       return {
         fornt: null,
