@@ -1,6 +1,6 @@
 <template>
   <main class="content">
-    <eng-card v-if="!isTable"/>
+    <eng-card v-if="isCard"/>
     <h1 v-else>Test</h1>
   </main>
 </template>
@@ -11,17 +11,24 @@
     components: { EngCard },
     name: 'page-content',
     props: {
-      isTable: {
+      isCard: {
         type: Number,
         required: true,
-        default: 0
+        default: 0,
       }
     },
+    data() {
+      return {}
+    },
+    methods: {},
     computed: {
       setClassName() {
-        return !this.isTable ? 'flip-card__inner-transform' :'';
+        return !this.view ? 'flip-card__inner-transform' : '';
       }
-    }
+    },
+    mounted() {
+      
+    },
   }
 </script>
 <style scoped>

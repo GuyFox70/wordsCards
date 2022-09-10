@@ -1,7 +1,7 @@
 <template>
   <section class="wrapper">
     <page-header @view="view" :sizeCollection="sizeCollection"/>
-    <page-content :isTable="isTable"/>
+    <page-content :isCard="isCard"/>
   </section>  
 </template>
 
@@ -14,7 +14,6 @@
     components: { PageHeader, PageContent },
     data() {
       return {
-        isTable: 0,
         sizeCollection: {},
         arrPartsSpeech: [
           'n',
@@ -24,12 +23,13 @@
           'adv'
         ],
         i: 0,
-        h: helper
+        h: helper,
+        isCard: 1,
       }
     },
     methods: {
       view(data) {
-        this.isTable = data;
+        this.isCard = data;
       }
     },
     mounted() {

@@ -21,7 +21,7 @@
     methods: {
       view(data) {
         this.$emit('view', data);
-      } 
+      }
     },
   }
 </script>

@@ -17,16 +17,14 @@
   export default {
     name: 'view-btn',
     data() {
-      return {
-        
-      }
+      return {}
     },
     methods: {
       showCard() {
-        this.$emit('view', 0);
+        this.$emit('view', 1);
       },
       showTable() {
-        this.$emit('view', 1);
+        this.$emit('view', 0);
       },
     },
     mounted() {
