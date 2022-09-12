@@ -3,6 +3,7 @@ node_modules
 /dist
 common.json
 words.json
+sort.mjs
 
 # local env files
 .env.local
